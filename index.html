@@ -17,7 +17,6 @@
             color: #333;
         }
 
-        /* Logo Styles */
         .logo-container {
             display: flex;
             align-items: center;
@@ -41,7 +40,6 @@
             font-weight: 400;
         }
 
-        /* Header */
         header {
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -91,7 +89,6 @@
             box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
             color: white;
@@ -154,7 +151,6 @@
             transform: translateY(-3px);
         }
 
-        /* Services Section */
         .services {
             padding: 5rem 2rem;
             background: #f8fafc;
@@ -205,7 +201,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Banks Section */
         .banks {
             padding: 5rem 2rem;
             background: white;
@@ -229,7 +224,6 @@
             color: #475569;
         }
 
-        /* Process Section */
         .process {
             padding: 5rem 2rem;
             background: #1e293b;
@@ -262,7 +256,6 @@
             font-weight: 700;
         }
 
-        /* Contact Section */
         .contact {
             padding: 5rem 2rem;
             background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -285,7 +278,6 @@
             margin-bottom: 2rem;
         }
 
-        /* Footer */
         footer {
             background: #0f172a;
             color: white;
@@ -293,7 +285,6 @@
             text-align: center;
         }
 
-        /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -364,20 +355,15 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo-container">
                 <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- House Shape -->
                     <path d="M50 15 L85 45 L85 85 L15 85 L15 45 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
-                    <!-- Letter Y -->
                     <path d="M35 35 L45 50 L45 65 M55 35 L45 50" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-                    <!-- Connection Dots -->
                     <circle cx="25" cy="40" r="3" fill="#f59e0b"/>
                     <circle cx="75" cy="40" r="3" fill="#f59e0b"/>
                     <circle cx="50" cy="25" r="3" fill="#f59e0b"/>
-                    <!-- Connection Lines -->
                     <line x1="25" y1="40" x2="50" y2="25" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
                     <line x1="75" y1="40" x2="50" y2="25" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
                 </svg>
@@ -403,7 +389,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Your Dream Home Starts With The <span class="hero-highlight">Right Loan</span></h1>
@@ -415,7 +400,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2 class="section-title">What We Do For You</h2>
         <div class="services-grid">
@@ -452,7 +436,6 @@
         </div>
     </section>
 
-    <!-- Banks Section -->
     <section class="banks" id="banks">
         <h2 class="section-title">We Work With All Major Banks</h2>
         <div class="banks-grid">
@@ -466,7 +449,6 @@
         </div>
     </section>
 
-    <!-- Process Section -->
     <section class="process" id="process">
         <h2 class="section-title">How It Works</h2>
         <div class="process-steps">
@@ -498,7 +480,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-content">
             <h2>Ready To Get Started?</h2>
@@ -511,23 +492,19 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Young's Property Connect. All rights reserved.</p>
         <p>Professional Home Loan & Mortgage Broking Services | Cape Town, South Africa</p>
     </footer>
 
     <script>
-        // Prevent default anchor behavior and handle smooth scrolling
         document.addEventListener('DOMContentLoaded', function() {
-            // Handle only internal anchor links (not mailto, tel, or external links)
             const links = document.querySelectorAll('a[href^="#"]');
             
             links.forEach(link => {
                 link.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
                     
-                    // Only handle hash links
                     if (href && href.startsWith('#') && href.length > 1) {
                         e.preventDefault();
                         e.stopPropagation();
@@ -536,10 +513,8 @@
                         const targetElement = document.getElementById(targetId);
                         
                         if (targetElement) {
-                            // Close mobile menu if open
                             closeMobileMenu();
                             
-                            // Smooth scroll to target
                             const headerOffset = 80;
                             const elementPosition = targetElement.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -566,7 +541,6 @@
             mobileNav.classList.remove('active');
         }
 
-        // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             const mobileNav = document.getElementById('mobileNav');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
@@ -578,3 +552,4 @@
     </script>
 </body>
 </html>
+      
